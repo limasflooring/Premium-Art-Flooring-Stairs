@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Art Flooring & Stairs | Hardwood Floors Saint Louis, MO</title>
+<meta name="description" content="Premium Art Flooring & Stairs — hardwood installation, refinishing, custom staining, tile and staircase renovation in Saint Louis, MO.">
+<link rel="icon" href="https://www.limasflooring.com/__l5e/assets-v1/c77d309e-a8a7-4e92-b781-2e4d53f6bf4b/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#081a30; --navy2:#0e2a4a; --amber:#f5a524; --amber2:#ffc766; --amber3:#d98200;
+  --text:#0f1c2e; --muted:#566678; --card:#fff; --line:rgba(15,28,46,.1); --bgl:#f2f5f9;
+  --radius:18px; --head:'Sora',system-ui,sans-serif; --sans:'Inter',system-ui,sans-serif; --scroll:0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:#fff;color:var(--text);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--amber);color:var(--navy)}
+::-moz-selection{background:var(--amber);color:var(--navy)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--navy)}::-webkit-scrollbar-thumb{background:linear-gradient(var(--amber),var(--amber3));border-radius:10px}
+.wrap{width:min(1200px,92%);margin:0 auto}
+h1,h2,h3,h4{font-family:var(--head);font-weight:700;line-height:1.14;letter-spacing:-.02em;color:var(--text)}
+h1{font-size:clamp(2.5rem,5.4vw,4.5rem)} h2{font-size:clamp(1.9rem,3.6vw,2.9rem)} h3{font-size:1.3rem}
+p{color:var(--muted)}
+.gold{background:linear-gradient(110deg,var(--amber3),var(--amber) 50%,var(--amber2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--amber3);font-weight:700;margin-bottom:16px}
+.dark .eyebrow{color:var(--amber)}
+.eyebrow::before{content:"";width:30px;height:2px;background:currentColor;border-radius:2px}
+section{padding:110px 0;position:relative}
+.dark{--text:#eef3fa;--muted:#9fb1c6;--card:rgba(255,255,255,.055);--line:rgba(255,255,255,.13);color:var(--text);
+  background:radial-gradient(900px 520px at 88% -8%,rgba(245,165,36,.16),transparent 60%),radial-gradient(800px 520px at -5% 105%,rgba(59,130,246,.18),transparent 60%),var(--navy)}
+.light{background:var(--bgl)}.white{background:#fff}
+.head{max-width:700px;margin-bottom:56px}.head.center{margin-inline:auto;text-align:center}.head.center .eyebrow{justify-content:center}.head p{margin-top:16px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:12px;font-weight:600;font-size:.95rem;border:1.5px solid transparent;transition:transform .3s,box-shadow .3s,background .3s,color .3s;position:relative;overflow:hidden;will-change:transform}
+.btn-gold{background:linear-gradient(120deg,var(--amber3),var(--amber) 50%,var(--amber2));color:#1a1204;box-shadow:0 12px 30px rgba(245,165,36,.35)}
+.btn-gold:hover{box-shadow:0 18px 44px rgba(245,165,36,.5)}
+.btn-gold::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);transition:.7s}
+.btn-gold:hover::after{left:140%}
+.btn-line{border-color:currentColor;color:var(--text);background:transparent}
+.btn-line:hover{background:var(--amber);border-color:var(--amber);color:#1a1204}
+
+/* loader: tile flip grid */
+#loader{position:fixed;inset:0;z-index:999;background:radial-gradient(circle at 50% 40%,#12335a,#061426 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;transition:opacity .8s,visibility .8s}
+#loader.done{opacity:0;visibility:hidden}
+.ldgrid{display:grid;grid-template-columns:repeat(3,48px);gap:6px;perspective:700px}
+.ldgrid b{width:48px;height:48px;border-radius:5px;background:linear-gradient(135deg,#f3ebdd,#cdbfa8);animation:flip 1.6s ease-in-out infinite;animation-delay:calc(var(--i)*.1s);box-shadow:0 8px 18px rgba(0,0,0,.4)}
+.ldgrid b:nth-child(odd){background:linear-gradient(135deg,var(--amber2),var(--amber3))}
+@keyframes flip{0%,100%{transform:rotateX(90deg) translateZ(-30px);opacity:0}40%,70%{transform:none;opacity:1}}
+.ld-brand{text-align:center;color:#fff}.ld-brand img{height:74px;margin:0 auto 12px;width:auto;object-fit:contain}
+.ld-brand b{font-family:var(--head);font-size:1.4rem;letter-spacing:.12em;text-transform:uppercase}
+.ld-bar{width:240px;height:3px;background:rgba(255,255,255,.12);overflow:hidden;border-radius:3px}
+.ld-bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--amber3),var(--amber2));animation:load 2s ease forwards}
+@keyframes load{to{width:100%}}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--amber3),var(--amber2));z-index:300}
+#glow{position:fixed;left:0;top:0;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:radial-gradient(circle,rgba(245,165,36,.13),transparent 65%);pointer-events:none;z-index:2;mix-blend-mode:screen;will-change:transform}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:200;transition:.4s;padding:14px 0;color:#fff}
+header.solid{background:rgba(8,26,48,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.1);padding:8px 0;box-shadow:0 14px 40px rgba(0,0,0,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:14px;color:#fff}
+.brand img{height:66px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(0,0,0,.4))}
+.brand span{font-family:var(--head);font-size:1.12rem;font-weight:700;line-height:1.1;letter-spacing:.04em;text-transform:uppercase}
+.brand span small{display:block;font-family:var(--sans);font-size:.6rem;letter-spacing:.34em;color:var(--amber);font-weight:700;margin-top:3px}
+nav ul{display:flex;align-items:center;gap:4px}
+nav a.lnk{padding:10px 15px;font-size:.9rem;font-weight:500;color:#dbe5f2;border-radius:10px;transition:.3s;display:inline-block;position:relative}
+nav a.lnk::after{content:"";position:absolute;left:15px;right:15px;bottom:5px;height:2px;background:var(--amber);transform:scaleX(0);transition:.3s}
+nav a.lnk:hover,nav a.lnk.active{color:#fff}
+nav a.lnk:hover::after,nav a.lnk.active::after{transform:scaleX(1)}
+.has-dd{position:relative}
+.dd{position:absolute;top:100%;left:-20px;min-width:280px;background:#fff;border-radius:16px;padding:10px;opacity:0;visibility:hidden;transform:perspective(700px) rotateX(-16deg) translateY(10px);transform-origin:top;transition:.35s;box-shadow:0 30px 70px rgba(0,0,0,.4)}
+.has-dd:hover .dd,.has-dd:focus-within .dd{opacity:1;visibility:visible;transform:none}
+.dd a{display:block;padding:11px 16px;border-radius:10px;font-size:.9rem;color:#14253a;font-weight:500;transition:.25s}
+.dd a:hover{background:#fff4e0;color:#a05f00;padding-left:22px}
+.nav-cta{padding:11px 22px;font-size:.88rem}
+.burger{display:none;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;width:46px;height:46px;border-radius:12px;font-size:1.3rem}
+
+/* hero */
+.hero{min-height:100vh;padding:150px 0 100px;display:flex;align-items:center;overflow:hidden;perspective:1300px}
+.floor3d{position:absolute;left:-40%;right:-40%;bottom:-22%;height:80%;transform-origin:50% 100%;transform:rotateX(calc(68deg - var(--scroll)*16deg)) translateY(calc(var(--scroll)*-70px));
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.1) 0 2px,transparent 2px 130px),repeating-linear-gradient(0deg,rgba(255,255,255,.1) 0 2px,transparent 2px 130px),linear-gradient(180deg,rgba(14,42,74,.2),rgba(245,165,36,.16) 80%);
+  animation:gridmove 6s linear infinite;-webkit-mask-image:linear-gradient(180deg,transparent,#000 45%);mask-image:linear-gradient(180deg,transparent,#000 45%)}
+@keyframes gridmove{to{background-position:0 130px,130px 0,0 0}}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center;position:relative;z-index:2}
+.hero h1{margin-bottom:24px}.hero p.lead{font-size:1.12rem;max-width:540px;margin-bottom:36px}
+.hero .btns{display:flex;gap:16px;flex-wrap:wrap}
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:42px;padding-top:26px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+.trust b{display:block;color:var(--text);font-family:var(--head);font-size:.95rem}
+.hero-card{position:relative;transform-style:preserve-3d}
+.scene-box{border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.16);box-shadow:0 60px 100px rgba(0,0,0,.6),0 0 0 10px rgba(255,255,255,.04);background:#0c2038;position:relative}
+.scene-box svg,.scene-box img{width:100%;height:auto;display:block}
+.scene-box img{aspect-ratio:600/520;object-fit:cover}
+.float-tag{position:absolute;background:rgba(255,255,255,.96);color:#0f1c2e;padding:13px 20px;border-radius:14px;font-size:.84rem;font-weight:600;box-shadow:0 24px 50px rgba(0,0,0,.4);animation:bob 5s ease-in-out infinite}
+.float-tag em{display:block;font-style:normal;color:var(--amber3);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase}
+.ft1{left:-34px;bottom:54px;transform:translateZ(80px)}.ft2{right:-18px;top:34px;transform:translateZ(100px);animation-delay:1.5s}
+@keyframes bob{50%{translate:0 -14px}}
+.scroll-hint{position:absolute;bottom:24px;left:50%;translate:-50% 0;z-index:3;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:10px}
+.scroll-hint i{width:1px;height:44px;background:linear-gradient(var(--amber),transparent);animation:drip 2s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* worker scene animation */
+.tl{opacity:0;transform-box:fill-box;transform-origin:center;animation:tileIn .55s cubic-bezier(.2,.8,.3,1.2) forwards}
+@keyframes tileIn{from{opacity:0;transform:translateY(-26px) scale(.86)}to{opacity:1;transform:none}}
+.armA{transform-box:view-box;transform-origin:442px 292px;animation:armA 3.6s ease-in-out infinite}
+@keyframes armA{0%,12%,100%{transform:rotate(0)}38%,58%{transform:rotate(10deg)}78%{transform:rotate(0)}}
+.armB{transform-box:view-box;transform-origin:436px 292px;animation:armB 1.8s ease-in-out infinite}
+@keyframes armB{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(5deg)}}
+.body{animation:breathe 3.6s ease-in-out infinite}
+@keyframes breathe{50%{transform:translateY(2.5px)}}
+.puff{opacity:0;transform-box:fill-box;transform-origin:center;animation:puff 3.6s ease-out infinite}
+@keyframes puff{0%,76%{opacity:0;transform:translateY(0) scale(.5)}82%{opacity:.65}100%{opacity:0;transform:translateY(-22px) scale(1.9)}}
+.beam{animation:beam 7s ease-in-out infinite}
+@keyframes beam{50%{opacity:.75}}
+
+/* floating 3D tiles */
+.fls{position:absolute;inset:0;perspective:1100px;pointer-events:none;overflow:hidden}
+.fl{position:absolute;left:var(--x);top:var(--y);width:var(--s);height:var(--s);transform-style:preserve-3d;translate:calc(var(--px,0)*var(--k)*1px) calc(var(--py,0)*var(--k)*1px);animation:tumble var(--t) linear infinite;opacity:.9}
+.fl i{position:absolute;inset:0;border:1px solid rgba(0,0,0,.18);border-radius:3px;background:linear-gradient(rgba(0,0,0,.14) 1px,transparent 1px) 50% 50%/50% 50%,linear-gradient(90deg,rgba(0,0,0,.14) 1px,transparent 1px) 50% 50%/50% 50%,linear-gradient(135deg,#f6efe2,#c9bba3);box-shadow:inset 0 0 18px rgba(0,0,0,.18)}
+.fl.w i{background:repeating-linear-gradient(90deg,#c98a47 0 12px,#a8692c 12px 24px)}
+.fl.a i{background:linear-gradient(135deg,var(--amber2),var(--amber3))}
+.fl i:nth-child(1){transform:translateZ(calc(var(--s)/2))}.fl i:nth-child(2){transform:rotateY(180deg) translateZ(calc(var(--s)/2))}
+.fl i:nth-child(3){transform:rotateY(90deg) translateZ(calc(var(--s)/2))}.fl i:nth-child(4){transform:rotateY(-90deg) translateZ(calc(var(--s)/2))}
+.fl i:nth-child(5){transform:rotateX(90deg) translateZ(calc(var(--s)/2))}.fl i:nth-child(6){transform:rotateX(-90deg) translateZ(calc(var(--s)/2))}
+@keyframes tumble{from{transform:rotateX(20deg) rotateY(0) rotateZ(8deg)}to{transform:rotateX(20deg) rotateY(360deg) rotateZ(8deg)}}
+
+/* marquee */
+.strip{background:linear-gradient(100deg,var(--amber3),var(--amber),var(--amber2));padding:20px 0;overflow:hidden;transform:perspective(1000px) rotateX(5deg) scale(1.02);transform-origin:50% 0;box-shadow:0 24px 50px rgba(0,0,0,.25);position:relative;z-index:5}
+.strip .track{display:flex;width:max-content;animation:marq 28s linear infinite}
+.strip span{font-family:var(--head);font-weight:700;color:#1a1204;font-size:1.05rem;white-space:nowrap;padding:0 28px;display:flex;align-items:center;gap:28px;letter-spacing:.02em}
+.strip span::after{content:"◆";font-size:.7rem;opacity:.6}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* 3D reveal */
+.r3d{opacity:0;transform:perspective(1200px) rotateX(24deg) translateY(70px) translateZ(-130px);transition:opacity .9s ease,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.r3d.in{opacity:1;transform:none}
+.r3d.left{transform:perspective(1200px) rotateY(-26deg) translateX(-80px) translateZ(-110px)}
+.r3d.right{transform:perspective(1200px) rotateY(26deg) translateX(80px) translateZ(-110px)}
+.r3d.left.in,.r3d.right.in{transform:none}
+.dp{will-change:transform}
+.tilt{position:relative}
+.tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.28),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none;z-index:6}
+.tilt:hover::after{opacity:1}.stack3d.tilt::after{display:none}
+
+/* cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;perspective:1400px}
+.s-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:box-shadow .4s,border-color .4s;transform-style:preserve-3d;display:flex;flex-direction:column;box-shadow:0 18px 50px rgba(15,28,46,.08)}
+.s-card:hover{border-color:var(--amber);box-shadow:0 40px 80px rgba(15,28,46,.22)}
+.s-card .pic{aspect-ratio:16/11;overflow:hidden;position:relative}
+.s-card .pic img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.s-card:hover .pic img{transform:scale(1.12)}
+.s-card .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(8,26,48,.7))}
+.s-card .num{position:absolute;z-index:2;top:16px;left:16px;font-family:var(--head);font-size:.82rem;font-weight:700;color:var(--navy);background:var(--amber);padding:4px 12px;border-radius:8px}
+.s-card .body{padding:26px 28px 30px;display:flex;flex-direction:column;gap:12px;flex:1;transform:translateZ(30px)}
+.s-card .body p{font-size:.93rem;flex:1}
+.more{display:inline-flex;align-items:center;gap:8px;color:var(--amber3);font-weight:700;font-size:.9rem}
+.dark .more{color:var(--amber)}
+.more::after{content:"→";transition:.3s}.s-card:hover .more::after{transform:translateX(6px)}
+.center-btn{text-align:center;margin-top:50px}
+
+/* about snippet */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.stack3d{position:relative;aspect-ratio:1/1.05;perspective:1200px}
+.stack3d .p{position:absolute;border-radius:20px;overflow:hidden;border:4px solid #fff;box-shadow:0 40px 80px rgba(15,28,46,.35)}
+.dark .stack3d .p{border-color:rgba(255,255,255,.2)}
+.stack3d .p img{width:100%;height:100%;object-fit:cover}
+.stack3d .p1{width:68%;height:72%;left:0;top:0;transform:rotateY(16deg) rotateX(5deg)}
+.stack3d .p2{width:56%;height:56%;right:0;bottom:0;transform:rotateY(-16deg) rotateX(-5deg) translateZ(60px);border-color:var(--amber)}
+.checks{display:grid;gap:14px;margin:26px 0 34px}
+.checks li{display:flex;gap:14px;align-items:flex-start;color:var(--text)}
+.checks li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--amber);color:var(--navy);font-size:.8rem;font-weight:800;display:grid;place-items:center;margin-top:2px}
+
+/* why */
+.why-card{padding:36px 30px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);transition:.4s;transform-style:preserve-3d;backdrop-filter:blur(8px)}
+.why-card:hover{border-color:var(--amber);box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.why-card .ic{width:62px;height:62px;border-radius:16px;display:grid;place-items:center;font-size:1.6rem;background:linear-gradient(135deg,var(--amber3),var(--amber2));color:#1a1204;margin-bottom:22px;box-shadow:0 14px 30px rgba(245,165,36,.35);transform:translateZ(40px)}
+.why-card h3{margin-bottom:10px}.why-card p{font-size:.93rem}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;perspective:1400px}
+
+/* reviews */
+.rev{padding:34px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);position:relative;box-shadow:0 18px 50px rgba(15,28,46,.08)}
+.rev::before{content:"“";position:absolute;right:26px;top:6px;font:800 6rem/1 var(--head);color:rgba(245,165,36,.2)}
+.stars{color:var(--amber);letter-spacing:4px;margin-bottom:14px}
+.rev p{margin-bottom:22px}
+.who{display:flex;align-items:center;gap:14px}
+.who i{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:700;background:linear-gradient(135deg,var(--navy2),var(--navy));color:var(--amber)}
+.who b{display:block;font-size:.95rem;color:var(--text)}.who span{font-size:.78rem;color:var(--muted)}
+.note{margin-top:30px;text-align:center;font-size:.8rem;color:#7c8a9b}
+
+/* faq */
+.faq{max-width:860px;margin:0 auto;display:grid;gap:14px}
+.fq{border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden;transition:.3s;box-shadow:0 8px 24px rgba(15,28,46,.05)}
+.fq.open{border-color:var(--amber);box-shadow:0 20px 44px rgba(15,28,46,.12)}
+.fq button{width:100%;background:none;border:0;color:var(--text);text-align:left;padding:22px 26px;font-size:1.02rem;font-weight:600;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.fq button b{color:var(--amber3);font-size:1.5rem;transition:.3s;font-weight:400}
+.fq.open button b{transform:rotate(45deg)}
+.fq div{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.fq div p{padding:0 26px 24px}
+
+/* cta */
+.cta{padding:90px 0}
+.cta-box{border-radius:30px;padding:80px 50px;text-align:center;background:radial-gradient(circle at 20% 0,rgba(245,165,36,.3),transparent 55%),linear-gradient(135deg,#0e2a4a,#081a30);border:1px solid rgba(255,255,255,.14);position:relative;overflow:hidden;box-shadow:0 50px 90px rgba(8,26,48,.4)}
+.cta-box>*:not(.fls){position:relative;z-index:2}
+.cta-box h2{max-width:720px;margin:0 auto 18px;color:#fff}.cta-box p{max-width:560px;margin:0 auto 34px;color:#b3c3d8}
+.cta-box .eyebrow{color:var(--amber)}
+.cta-box .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-box .btn-line{color:#fff}
+
+/* inner pages */
+.page-hero{padding:190px 0 100px;text-align:center;position:relative;overflow:hidden}
+.page-hero .wrap{position:relative;z-index:2}
+.page-hero p{max-width:640px;margin:18px auto 0}
+.crumbs{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}.crumbs a{color:var(--amber)}
+.s-sec{overflow:hidden;padding:0}
+.s-hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:170px 0 100px;position:relative;z-index:2}
+.s-hero .frame{border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.18);aspect-ratio:5/4.4;box-shadow:0 60px 100px rgba(0,0,0,.55)}
+.s-hero .frame img{width:100%;height:100%;object-fit:cover}
+.s-hero .frame.sc{aspect-ratio:auto}.s-hero .frame.sc svg{display:block;width:100%;height:auto}
+.s-hero h1{font-size:clamp(2.2rem,4.6vw,3.8rem);margin-bottom:20px}
+.s-hero .btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.prose p{margin-bottom:18px;font-size:1.02rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:38px;box-shadow:0 18px 50px rgba(15,28,46,.07)}
+.panel h3{margin-bottom:18px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;perspective:1200px}
+.step{padding:30px 26px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;position:relative;box-shadow:0 18px 44px rgba(15,28,46,.07);transition:.4s}
+.step:hover{border-color:var(--amber)}
+.step b{font-family:var(--head);font-size:2.8rem;color:rgba(245,165,36,.55);display:block;line-height:1;margin-bottom:12px}
+.step h4{margin-bottom:8px}.step p{font-size:.9rem}
+.mini{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.mini a{display:block;border-radius:16px;overflow:hidden;border:1px solid var(--line);position:relative;aspect-ratio:1/1;transition:.4s;box-shadow:0 14px 34px rgba(15,28,46,.12)}
+.mini a:hover{transform:translateY(-8px);border-color:var(--amber)}
+.mini img{width:100%;height:100%;object-fit:cover}
+.mini span{position:absolute;inset:auto 0 0 0;padding:30px 14px 14px;background:linear-gradient(transparent,rgba(8,26,48,.92));font-size:.82rem;font-weight:600;color:#fff}
+
+/* areas */
+.areas{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;perspective:1000px}
+.area{padding:22px 20px;border:1px solid var(--line);border-radius:14px;background:#fff;display:flex;gap:12px;align-items:center;transition:.35s;font-weight:600;color:var(--text);box-shadow:0 8px 24px rgba(15,28,46,.05)}
+.area::before{content:"📍";font-size:1rem}
+.area:hover{transform:translateY(-6px) rotateX(8deg);border-color:var(--amber);background:#fff7e8}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);height:420px;margin-top:50px;box-shadow:0 30px 70px rgba(15,28,46,.15)}
+.map iframe{width:100%;height:100%;border:0}
+
+/* gallery */
+.gal{columns:3;column-gap:22px;perspective:1400px}
+.gal figure{break-inside:avoid;margin-bottom:22px;border-radius:16px;overflow:hidden;position:relative;border:1px solid var(--line);cursor:zoom-in;box-shadow:0 16px 40px rgba(15,28,46,.12)}
+.gal img{width:100%;transition:transform .8s}
+.gal figure:hover img{transform:scale(1.08)}
+.gal figcaption{position:absolute;inset:auto 0 0 0;padding:40px 20px 18px;background:linear-gradient(transparent,rgba(8,26,48,.92));font-size:.85rem;font-weight:600;color:#fff;transform:translateY(100%);transition:.4s}
+.gal figure:hover figcaption{transform:none}
+#lightbox{position:fixed;inset:0;background:rgba(4,12,24,.94);z-index:400;display:none;align-items:center;justify-content:center;padding:30px;cursor:zoom-out}
+#lightbox.on{display:flex}#lightbox img{max-height:90vh;border-radius:16px;border:2px solid var(--amber)}
+
+/* contact */
+.c-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.info{display:grid;gap:18px}
+.info .it{display:flex;gap:18px;padding:24px;border:1px solid var(--line);border-radius:16px;background:#fff;transition:.35s;box-shadow:0 10px 30px rgba(15,28,46,.06)}
+.info .it:hover{border-color:var(--amber);transform:translateX(8px)}
+.info .it i{font-style:normal;width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--amber3),var(--amber2));color:#1a1204;font-size:1.2rem;flex:none}
+.info b{display:block;font-family:var(--head);font-size:1.1rem;color:var(--text)}.info span,.info a{color:var(--muted);font-size:.95rem;word-break:break-word}
+.info a:hover{color:var(--amber3)}
+form{display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+input,select,textarea{width:100%;padding:16px 18px;border-radius:12px;border:1.5px solid #dbe3ec;background:#f8fafc;color:var(--text);font:inherit;outline:none;transition:.3s}
+input:focus,select:focus,textarea:focus{border-color:var(--amber);background:#fff;box-shadow:0 0 0 4px rgba(245,165,36,.18)}
+textarea{min-height:140px;resize:vertical}
+.ok{display:none;padding:16px;border-radius:12px;background:#fff4e0;border:1px solid var(--amber);color:#7a4a00}
+
+/* footer */
+footer{background:#050f1d;border-top:3px solid var(--amber);padding:80px 0 0;color:#9fb1c6}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.1fr;gap:50px;padding-bottom:56px}
+footer .brand img{height:76px}
+footer h4{font-size:1.15rem;margin-bottom:22px;color:#fff}
+footer li{margin-bottom:12px;font-size:.93rem;color:#9fb1c6}footer li a:hover{color:var(--amber);padding-left:6px}footer li a{transition:.25s}
+footer p{font-size:.93rem;margin-top:20px;color:#9fb1c6}
+.f-bot{border-top:1px solid rgba(255,255,255,.1);padding:24px 0;text-align:center;font-size:.82rem;color:#6f8198}
+
+@media(max-width:1020px){
+  .burger{display:block}.nav-cta{display:none}
+  nav{position:fixed;inset:0 0 0 auto;width:min(360px,88%);background:#081a30;padding:100px 26px 30px;transform:translateX(105%);transition:.45s;overflow:auto;border-left:1px solid rgba(255,255,255,.1)}
+  nav.open{transform:none}nav ul{flex-direction:column;align-items:stretch}
+  .dd{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;background:none;padding:0 0 0 12px;min-width:0}
+  .dd a{color:#c9d6e6}.dd a:hover{background:rgba(255,255,255,.06);color:var(--amber)}
+  .burger{position:relative;z-index:260}
+  .hero-grid,.split,.s-hero,.c-grid{grid-template-columns:1fr}.hero{padding-top:130px}
+  .grid3{grid-template-columns:1fr 1fr}.grid4,.steps{grid-template-columns:1fr 1fr}.areas{grid-template-columns:1fr 1fr 1fr}
+  .f-grid{grid-template-columns:1fr 1fr}.mini{grid-template-columns:repeat(3,1fr)}.gal{columns:2}
+  .ft1{left:0}.ft2{right:0}
+}
+@media(max-width:640px){
+  section{padding:76px 0}.grid3,.grid4,.steps,.f-grid,.row{grid-template-columns:1fr}.areas{grid-template-columns:1fr 1fr}
+  .brand span{font-size:.92rem}.brand img{height:54px}.gal{columns:1}.mini{grid-template-columns:1fr 1fr}.cta-box{padding:54px 24px}
+  #glow{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.r3d{opacity:1;transform:none}.tl{opacity:1}}
+</style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="ldgrid">
+    <b style="--i:0"></b><b style="--i:1"></b><b style="--i:2"></b><b style="--i:5"></b><b style="--i:4"></b><b style="--i:3"></b><b style="--i:6"></b><b style="--i:7"></b><b style="--i:8"></b>
+  </div>
+  <div class="ld-brand"><img src="https://www.limasflooring.com/__l5e/assets-v1/c77d309e-a8a7-4e92-b781-2e4d53f6bf4b/logo.png" alt="Premium Art Flooring & Stairs logo"><b>Premium Art Flooring &amp; Stairs</b></div>
+  <div class="ld-bar"><span></span></div>
+</div>
+<div id="progress"></div>
+<div id="glow"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#/" class="brand" aria-label="Premium Art Flooring & Stairs home">
+      <img src="https://www.limasflooring.com/__l5e/assets-v1/c77d309e-a8a7-4e92-b781-2e4d53f6bf4b/logo.png" alt="Premium Art Flooring & Stairs logo">
+      <span>Premium Art Flooring<small>&amp; STAIRS</small></span>
+    </a>
+    <nav id="nav">
+      <ul>
+        <li><a class="lnk" data-r="home" href="#/">Home</a></li>
+        <li><a class="lnk" data-r="about" href="#/about">About Us</a></li>
+        <li class="has-dd"><a class="lnk" data-r="service" href="#/services">Services ▾</a><div class="dd" id="ddServices"></div></li>
+        <li><a class="lnk" data-r="areas" href="#/service-areas">Service Areas</a></li>
+        <li><a class="lnk" data-r="gallery" href="#/gallery">Gallery</a></li>
+        <li><a class="lnk" data-r="contact" href="#/contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <a href="#/contact" class="btn btn-gold nav-cta mag">Free Estimate</a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a href="#/" class="brand"><img src="https://www.limasflooring.com/__l5e/assets-v1/c77d309e-a8a7-4e92-b781-2e4d53f6bf4b/logo.png" alt="Premium Art Flooring & Stairs logo"><span>Premium Art Flooring<small>&amp; STAIRS</small></span></a>
+        <p>Refined floors and staircases for Saint Louis homes — installed, restored and finished by hand.</p>
+      </div>
+      <div><h4>Quick Links</h4><ul>
+        <li><a href="#/">Home</a></li><li><a href="#/about">About Us</a></li><li><a href="#/services">Services</a></li>
+        <li><a href="#/service-areas">Service Areas</a></li><li><a href="#/gallery">Gallery</a></li><li><a href="#/contact">Contact</a></li></ul></div>
+      <div><h4>Contact Information</h4><ul>
+        <li>📍 Saint Louis, MO</li>
+        <li>📞 <a href="tel:+13143083249">(314) 308-3249</a></li>
+        <li>✉️ <a href="mailto:Lucas.premiumflooring@gmail.com">Lucas.premiumflooring@gmail.com</a></li></ul></div>
+      <div><h4>Working Hours</h4><ul><li>Monday – Friday</li><li>9:00 AM – 5:00 PM</li><li>Saturday &amp; Sunday: Closed</li></ul></div>
+    </div>
+    <div class="f-bot">© <span id="yr"></span> Premium Art Flooring &amp; Stairs · Saint Louis, MO · All rights reserved.</div>
+  </div>
+</footer>
+<div id="lightbox"><img alt=""></div>
+
+<script>
+const PHONE="(314) 308-3249", MAIL="Lucas.premiumflooring@gmail.com";
+/* Optional: paste the URL of a real photo of a tile installer here to replace the animated illustration in the hero */
+const HERO_PHOTO="";
+
+/* ===== SERVICES DATA (each gets its own page) ===== */
+const SERVICES=[
+{id:"hardwood-installation",name:"Hardwood Installation",
+ img:"https://avatars.mds.yandex.net/i?id=f1854a978521935bb61db57b220f4692e9d37538-4984071-images-thumbs&n=13",
+ short:"Solid hardwood laid with tight seams and a flawless, long-lasting finish.",
+ lead:"Nothing changes the feel of a home like real wood underfoot. We plan, lay and finish solid hardwood so every room reads warm, balanced and built to last for decades.",
+ body:["Every installation begins with a moisture and subfloor check, because a beautiful floor depends on what is beneath it. We level, prepare and acclimate the boards before a single plank is fixed.","From classic oak and rich walnut to hickory and maple, we help you match species, width and grain to your light, your layout and your lifestyle. Boards are staggered and aligned by hand for a natural, seamless look.","Once laid, the floor is sanded smooth, stained if desired and sealed with a durable protective coat, so it is ready for real family life."],
+ inc:["Subfloor inspection and leveling","Species, grade and width guidance","Nail-down, glue-down or floating methods","Transitions, thresholds and trim","Sanding, sealing and final cleanup"],
+ steps:[["Consult","We visit, measure and discuss style and budget."],["Prepare","Subfloor leveled and boards acclimated."],["Install","Planks laid, staggered and secured by hand."],["Finish","Sanded, sealed and inspected with you."]]},
+{id:"floor-refinishing",name:"Floor Refinishing",
+ img:"https://avatars.mds.yandex.net/i?id=7a1e4ffa9a3bd641bd09f3f176a5b63108367984-4382526-images-thumbs&n=13",
+ short:"Bring tired, scratched hardwood back to a rich, glowing like-new shine.",
+ lead:"Years of footsteps, furniture and sunlight leave a mark. Refinishing removes the wear and reveals the wood’s natural depth, often for a fraction of the cost of replacement.",
+ body:["We sand through the worn surface layer with dust-controlled equipment, taking floors back to clean, bare wood and smoothing out scratches, stains and uneven patches.","Minor damage is handled along the way. Gaps are filled, loose boards secured and individual damaged planks repaired or replaced, so the whole floor looks consistent.","Finish it your way: natural tone, a fresh stain color, matte, satin or high-gloss protective coats that guard against daily traffic."],
+ inc:["Dust-contained professional sanding","Spot repair of boards, gaps and dents","Stain color matching or a fresh new tone","Choice of matte, satin or gloss finishes","Guidance on drying time and aftercare"],
+ steps:[["Assess","We check wood thickness and surface condition."],["Sand","Multiple passes reveal fresh, clean wood."],["Color & Coat","Stain applied, then protective layers."],["Cure","Clear care guidance for lasting shine."]]},
+{id:"tile-installation",name:"Tile Installation",
+ img:"https://avatars.mds.yandex.net/i?id=a0caaf877057ca653da20433e6cc753de4bfac42-5530612-images-thumbs&n=13",
+ short:"Precise porcelain, ceramic and stone tile for kitchens, baths and entryways.",
+ lead:"Tile is only as good as its layout. We design clean, balanced patterns and set every piece with the precision that keeps grout lines straight and surfaces flat.",
+ body:["We prepare surfaces carefully with proper underlayment, leveling and waterproofing where moisture is a concern, protecting your investment from the start.","Porcelain, ceramic, natural stone, large format or mosaic — we cut and set each piece accurately, planning layouts so edges and focal points feel intentional.","Grout and sealing finish the job, giving you surfaces that are easy to clean, resistant to wear and beautiful for years."],
+ inc:["Layout planning and pattern design","Surface prep and waterproofing","Floor, wall and backsplash tile","Precision cuts, trim and edging","Grouting and sealing"],
+ steps:[["Plan","Material, pattern and layout agreed together."],["Prep","Surface leveled and waterproofed."],["Set","Tiles placed with exact spacing."],["Grout","Joints filled, cleaned and sealed."]]},
+{id:"staircase-renovation",name:"Staircase Renovation",
+ img:"https://avatars.mds.yandex.net/i?id=41a5815dbe731040a09463bbd467bde8b39d27b3-5604449-images-thumbs&n=13",
+ short:"Treads, risers and railings restored or reimagined into a stunning feature.",
+ lead:"Your staircase is the first thing guests notice and the part of your home everyone touches daily. We turn worn steps into a statement piece.",
+ body:["We renovate stairs in stages that suit your home: refinishing existing treads, replacing worn treads and risers, or fitting new hardwood coverings over a solid structure.","Railings, balusters and newel posts can be refreshed, restained or updated to a new look, so the full staircase feels like one cohesive design.","Safety and strength come first. Every step is checked for stability, and the finish includes grip-friendly protection for confident everyday use."],
+ inc:["Tread and riser replacement or refinishing","Handrail, baluster and newel updates","Squeaks and loose steps repaired","Matching stain to your floors","Durable, slip-conscious finish"],
+ steps:[["Inspect","Structure, treads and rails checked."],["Design","Choose wood tone, style and details."],["Rebuild","Steps and railings renewed by hand."],["Finish","Sealed for beauty and safe footing."]]},
+{id:"engineered-wood-flooring",name:"Engineered Wood Flooring",
+ img:"https://avatars.mds.yandex.net/i?id=3382a0ad7a0f4a8a5c185182b809e1931f185f8d-4356754-images-thumbs&n=13",
+ short:"Stable, real-wood-surface planks ideal for changing Midwest humidity.",
+ lead:"Engineered wood gives you genuine hardwood beauty with added stability. Its layered construction resists expansion and contraction, a smart fit for Saint Louis seasons.",
+ body:["A real hardwood top layer sits on a stable multi-ply core, so planks handle humidity swings better than many solid boards and suit more areas of the home, including basements and over radiant heat.","Wide planks, long lengths and premium textures are available in countless tones, letting you create an open, modern look without compromising on quality.","We choose the best installation method for your subfloor — floating, glued or nailed — and finish every edge, vent and doorway with care."],
+ inc:["Wide-plank and long-length options","Floating, glue-down or nail-down installs","Suitable for many below-grade spaces","Radiant-heat compatible options","Detailed trim and transition work"],
+ steps:[["Choose","Select tone, texture and plank size."],["Prepare","Subfloor tested, cleaned and flattened."],["Lay","Planks fitted with tight, even seams."],["Complete","Trim, transitions and final walkthrough."]]},
+{id:"custom-staining",name:"Custom Staining",
+ img:"https://mrsander.co.uk/wp-content/uploads/shutterstock_2352865107.jpg",
+ short:"Hand-matched stain colors that show off grain and complete your design.",
+ lead:"Color is what makes a floor personal. We blend and test stains until the tone feels exactly right in your light, with your furniture and your style.",
+ body:["We start with sample boards on your own wood, because every species and every room takes color differently. Seeing real results in real light removes the guesswork.","From natural honey and soft greige to deep espresso and rich ebony, we can lighten, darken or even out color, and layer tones for a custom, designer-grade look.","A premium protective topcoat then locks in the color and brings out the grain, giving your floor lasting depth and clarity."],
+ inc:["On-site sample testing","Custom-blended color mixes","Natural, warm, cool or dark palettes","Color matching to existing floors or stairs","Premium protective topcoat"],
+ steps:[["Sample","Test colors directly on your wood."],["Blend","Tones mixed and fine-tuned."],["Apply","Even, controlled staining by hand."],["Seal","Topcoat locks in color and depth."]]}
+];
+
+const AREAS=["Clayton","Kirkwood","Webster Groves","Chesterfield","Ladue","University City","Maplewood","Brentwood","Creve Coeur","Town & Country","Richmond Heights","Affton","Florissant","St. Charles","O'Fallon","Wildwood"];
+
+const FAQS=[
+["How long does a typical floor project take?","Most rooms are completed in a few days, depending on size and the work involved. After an on-site visit we give you a clear timeline before we start."],
+["Do you offer free estimates?","Yes. Call or send a message and we will arrange a visit, measure the space and walk you through options and pricing."],
+["Can my existing hardwood floors be refinished?","In most cases yes. If the boards have enough wood above the nails, refinishing can make them look new again and is often more affordable than replacing them."],
+["How should I choose between solid and engineered wood?","Solid wood suits above-grade rooms and can be refinished many times. Engineered wood is more stable in humidity, which makes it great for basements and open layouts."],
+["How long before I can walk on a newly finished floor?","Light foot traffic is usually fine within a day, while furniture and rugs should wait longer so the finish cures fully. We give exact guidance for your project."],
+["Do you work on staircases as well as floors?","Absolutely. We renovate treads, risers, railings and posts, and can match them to the flooring on the level they connect."]
+];
+
+/* ===== REVIEWS: replace the sample entries below with real customer reviews ===== */
+const REVIEWS=[
+{name:"Customer Name",place:"Saint Louis, MO",text:"Sample review slot — replace this text with a real review from one of your customers about their floor or staircase project.",sample:true},
+{name:"Customer Name",place:"Saint Louis, MO",text:"Sample review slot — paste a genuine testimonial here, along with the customer’s name and neighborhood, with their permission.",sample:true},
+{name:"Customer Name",place:"Saint Louis, MO",text:"Sample review slot — real reviews from Google or your clients build the most trust with new visitors.",sample:true}
+];
+
+const GALLERY=SERVICES.map(s=>({img:s.img,cap:s.name}));
+const extra=[SERVICES[0],SERVICES[3],SERVICES[1],SERVICES[4]].map((s,i)=>({img:s.img,cap:["Hardwood Detail","Stair Craftsmanship","Refinished Glow","Engineered Planks"][i]}));
+const GAL=[...GALLERY,...extra];
+
+/* ===== helpers ===== */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const sCard=(s,i)=>`<a class="s-card tilt r3d" style="--d:${(i%3)*.12}s" href="#/service/${s.id}">
+  <div class="pic"><span class="num">0${i+1}</span><img loading="lazy" src="${s.img}" alt="${s.name} in Saint Louis"></div>
+  <div class="body"><h3>${s.name}</h3><p>${s.short}</p><span class="more">Explore Service</span></div></a>`;
+const fl=list=>`<div class="fls">${list.map(([x,y,s,k,t,c])=>`<div class="fl ${c||""}" style="--x:${x};--y:${y};--s:${s}px;--k:${k};--t:${t}s"><i></i><i></i><i></i><i></i><i></i><i></i></div>`).join("")}</div>`;
+const cta=(t,p)=>`<section class="cta white"><div class="wrap dp"><div class="cta-box r3d mouse">
+  ${fl([["6%","18%",46,10,16,"w"],["88%","14%",38,-14,20,"a"],["80%","66%",54,16,24,""],["12%","70%",34,-10,18,"a"]])}
+  <span class="eyebrow">Free Estimate</span><h2>${t}</h2><p>${p}</p>
+  <div class="btns"><a class="btn btn-gold mag" href="#/contact">Request a Quote</a><a class="btn btn-line mag" href="tel:+13143083249">Call ${PHONE}</a></div></div></div></section>`;
+
+/* ===== animated tile-installer scene (SVG) ===== */
+function scene(){
+  const ys=[330,356,388,430,490],cols=6;
+  const xl=y=>70-70*(y-330)/160, xr=y=>530+70*(y-330)/160;
+  const P=(r,c)=>{const y=ys[r],l=xl(y),w=xr(y)-l;return[l+w*c/cols,y]};
+  const quad=(r,c,sx=.95,sy=.93)=>{const q=[P(r,c),P(r,c+1),P(r+1,c+1),P(r+1,c)];
+    const cx=(q[0][0]+q[1][0]+q[2][0]+q[3][0])/4,cy=(q[0][1]+q[1][1]+q[2][1]+q[3][1])/4;
+    return q.map(p=>(cx+(p[0]-cx)*sx).toFixed(1)+","+(cy+(p[1]-cy)*sy).toFixed(1)).join(" ")};
+  let laid="",bare="",n=0;
+  for(let r=0;r<4;r++)for(let c=0;c<cols;c++){
+    const isBare=(c===3&&r===3)||(c>=4&&r>=2);
+    if(isBare)bare+=`<polygon points="${quad(r,c,1,1)}" fill="url(#mortar)"/>`;
+    else laid+=`<polygon class="tl" style="animation-delay:${(2.4+n*.07).toFixed(2)}s" points="${quad(r,c)}" fill="url(#${(r+c)%2?'t2':'t1'})"/>`;
+    n++;
+  }
+  const act=quad(3,3,.95,.93);
+  const actSide=act.split(" ").map(p=>{const [x,y]=p.split(",");return x+","+(+y+6)}).join(" ");
+  return `<svg viewBox="0 0 600 520" role="img" aria-label="Installer laying a porcelain tile floor" xmlns="http://www.w3.org/2000/svg">
+<defs>
+ <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a2240"/><stop offset="1" stop-color="#16406b"/></linearGradient>
+ <linearGradient id="beamg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd58a" stop-opacity=".55"/><stop offset="1" stop-color="#ffd58a" stop-opacity="0"/></linearGradient>
+ <linearGradient id="t1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4ecdf"/><stop offset="1" stop-color="#d6c9b2"/></linearGradient>
+ <linearGradient id="t2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8dfcf"/><stop offset="1" stop-color="#c5b79f"/></linearGradient>
+ <linearGradient id="gloss" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/></linearGradient>
+ <pattern id="mortar" width="10" height="5" patternUnits="userSpaceOnUse"><rect width="10" height="5" fill="#a39c8f"/><rect y="2.4" width="10" height="1.7" fill="#7f786c"/></pattern>
+ <radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></radialGradient>
+</defs>
+<rect width="600" height="520" fill="url(#wall)"/>
+<g opacity=".5" stroke="#1d4a7a" stroke-width="1"><line x1="150" y1="0" x2="150" y2="330"/><line x1="300" y1="0" x2="300" y2="330"/><line x1="450" y1="0" x2="450" y2="330"/></g>
+<polygon class="beam" points="40,0 210,0 330,330 -60,330" fill="url(#beamg)"/>
+<rect y="318" width="600" height="14" fill="#0a1d36"/><rect y="316" width="600" height="3" fill="#2b5b92"/>
+<polygon points="70,330 530,330 600,490 0,490 0,520 600,520 600,490" fill="#8d8678"/>
+<polygon points="70,330 530,330 600,490 0,490" fill="#8d8678"/>
+${laid}${bare}
+<polygon points="70,330 530,330 600,490 0,490" fill="url(#gloss)"/>
+<!-- tile stack -->
+<g><polygon points="44,330 122,330 130,320 52,320" fill="#cfc2ab"/><polygon points="44,330 122,330 122,336 44,336" fill="#a89a82"/>
+<polygon points="48,320 126,320 134,310 56,310" fill="#ddd2bd"/><polygon points="48,320 126,320 126,326 48,326" fill="#b3a58c"/>
+<polygon points="52,310 130,310 138,300 60,300" fill="#eae1ce"/><polygon points="52,310 130,310 130,316 52,316" fill="#bdb094"/></g>
+<!-- bucket -->
+<g><ellipse cx="552" cy="426" rx="30" ry="7" fill="#000" opacity=".3"/>
+<path d="M524 378 L530 424 Q552 432 574 424 L580 378 Z" fill="#324a66"/><path d="M524 378 L530 424 Q552 432 574 424 L580 378" fill="none" stroke="#1d3148" stroke-width="2"/>
+<ellipse cx="552" cy="378" rx="28" ry="8" fill="#a39c8f"/><ellipse cx="552" cy="378" rx="28" ry="8" fill="none" stroke="#5a7390" stroke-width="3"/>
+<path d="M526 380 Q552 340 578 380" fill="none" stroke="#9fb1c6" stroke-width="2.5"/></g>
+<!-- worker shadow -->
+<ellipse cx="450" cy="482" rx="150" ry="16" fill="#000" opacity=".32"/>
+<g class="body">
+<!-- far arm with trowel -->
+<g class="armB">
+ <path d="M436 294 L398 354" stroke="#c98717" stroke-width="26" stroke-linecap="round" fill="none"/>
+ <path d="M398 354 L424 412" stroke="#b9855f" stroke-width="20" stroke-linecap="round" fill="none"/>
+ <polygon points="410,426 492,414 497,426 416,438" fill="#c9d3de"/><polygon points="410,426 492,414 493,418 411,430" fill="#eef3f8"/>
+ <circle cx="426" cy="418" r="14" fill="#b6bfca"/><rect x="418" y="400" width="16" height="12" rx="4" fill="#2a3340"/>
+</g>
+<!-- back leg (kneeling) -->
+<path d="M486 372 L440 452 L522 470" stroke="#1f3047" stroke-width="42" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M486 366 L440 446" stroke="#3a5272" stroke-width="12" stroke-linecap="round" opacity=".55" fill="none"/>
+<rect x="418" y="436" width="34" height="30" rx="10" fill="#10151c"/><rect x="424" y="442" width="22" height="8" rx="4" fill="#f5a524"/>
+<ellipse cx="531" cy="470" rx="22" ry="12" fill="#14181f"/>
+<!-- front leg -->
+<path d="M486 372 L404 396 L390 462" stroke="#2c4363" stroke-width="42" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M484 364 L406 388" stroke="#4a6a93" stroke-width="12" stroke-linecap="round" opacity=".5" fill="none"/>
+<rect x="404" y="404" width="30" height="26" rx="9" fill="#10151c"/><rect x="409" y="410" width="20" height="7" rx="3" fill="#f5a524"/>
+<path d="M366 480 L366 456 Q366 446 378 446 L408 450 L412 480 Z" fill="#171b22"/><rect x="362" y="478" width="52" height="7" rx="3" fill="#0b0d11"/>
+<!-- torso -->
+<path d="M484 372 L438 288" stroke="#f5a524" stroke-width="84" stroke-linecap="round" fill="none"/>
+<path d="M470 366 L424 282" stroke="#ffc766" stroke-width="22" stroke-linecap="round" opacity=".45" fill="none"/>
+<path d="M512 372 L466 288" stroke="#c98200" stroke-width="16" stroke-linecap="round" opacity=".5" fill="none"/>
+<path d="M452 346 L496 322" stroke="#e8eef5" stroke-width="8" stroke-linecap="round"/><path d="M462 365 L506 341" stroke="#e8eef5" stroke-width="8" stroke-linecap="round"/>
+<rect x="470" y="364" width="40" height="14" rx="6" fill="#0f1620" transform="rotate(-28 490 371)"/>
+<!-- neck & head -->
+<rect x="404" y="252" width="24" height="26" rx="10" fill="#b9855f"/>
+<circle cx="412" cy="232" r="28" fill="#d2a07a"/>
+<ellipse cx="437" cy="234" rx="6" ry="9" fill="#bf8a63"/>
+<path d="M386 240 Q380 246 387 250" stroke="#b9855f" stroke-width="4" stroke-linecap="round" fill="none"/>
+<path d="M392 250 Q412 274 436 250 Q430 262 412 264 Q398 262 392 250Z" fill="#5b4132" opacity=".6"/>
+<circle cx="396" cy="231" r="2.6" fill="#1b1410"/><path d="M388 224 L402 222" stroke="#4a3426" stroke-width="3" stroke-linecap="round"/>
+<path d="M386 232 L428 232" stroke="#9fd3ff" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+<path d="M382 226 C380 198 400 188 420 190 C442 192 450 210 448 226 Z" fill="#ffd23f"/>
+<path d="M404 192 C412 188 424 188 432 192" stroke="#e0a800" stroke-width="3" fill="none"/>
+<path d="M372 228 L454 228 Q458 232 452 236 L378 236 Q370 234 372 228Z" fill="#e8b800"/>
+<path d="M394 202 Q402 196 412 195" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".5" fill="none"/>
+<circle cx="440" cy="292" r="24" fill="#e7961a"/>
+</g>
+<!-- near arm + active tile -->
+<g class="armA">
+ <polygon points="${actSide}" fill="#a9997f"/>
+ <polygon points="${act}" fill="url(#t1)" stroke="#fff" stroke-opacity=".5" stroke-width="1"/>
+ <path d="M446 296 L414 360" stroke="#f5a524" stroke-width="30" stroke-linecap="round" fill="none"/>
+ <path d="M434 300 L408 352" stroke="#ffc766" stroke-width="9" stroke-linecap="round" opacity=".5" fill="none"/>
+ <path d="M414 360 L372 414" stroke="#d2a07a" stroke-width="22" stroke-linecap="round" fill="none"/>
+ <path d="M414 360 L372 414" stroke="#e7b896" stroke-width="7" stroke-linecap="round" opacity=".55" fill="none"/>
+ <circle cx="366" cy="422" r="16" fill="#c5ccd5"/><path d="M356 414 L352 428 M362 410 L358 430" stroke="#8a949f" stroke-width="2.2" stroke-linecap="round"/>
+</g>
+<g fill="#e9e2d4"><circle class="puff" cx="318" cy="478" r="7"/><circle class="puff" style="animation-delay:.05s" cx="346" cy="484" r="9"/><circle class="puff" style="animation-delay:.1s" cx="376" cy="478" r="6"/><circle class="puff" style="animation-delay:.03s" cx="332" cy="470" r="5"/></g>
+<rect width="600" height="520" fill="url(#vig)"/>
+</svg>`;
+}
+function heroMedia(){return HERO_PHOTO?`<img src="${HERO_PHOTO}" alt="Tile installer at work">`:scene()}
+
+/* ===== pages ===== */
+function home(){
+return `
+<section class="hero dark mouse">
+  <div class="floor3d"></div>
+  ${fl([["46%","10%",54,18,22,"a"],["4%","58%",44,-14,18,"w"],["92%","76%",60,20,26,""],["30%","84%",34,-18,20,"a"],["68%","6%",30,12,15,""]])}
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow r3d">Saint Louis · Hardwood · Tile · Stairs</span>
+      <h1 class="r3d" style="--d:.1s">Precision Floors &amp; <span class="gold">Stairs, Built to Last</span></h1>
+      <p class="lead r3d" style="--d:.2s">Professional installation, restoration and finishing for hardwood, tile and staircases across Saint Louis — careful hands, clean job sites and results you can see and feel.</p>
+      <div class="btns r3d" style="--d:.3s"><a class="btn btn-gold mag" href="#/services">Explore Services →</a><a class="btn btn-line mag" href="#/contact">Get a Free Estimate</a></div>
+      <div class="trust r3d" style="--d:.4s"><div><b>Free Estimates</b>No-pressure quotes</div><div><b>Mon – Fri</b>9:00 AM – 5:00 PM</div><div><b>Saint Louis, MO</b>Local &amp; reliable</div></div>
+    </div>
+    <div class="hero-card tilt r3d right" data-depth="1">
+      <div class="scene-box">${heroMedia()}</div>
+      <div class="float-tag ft1"><em>Now Installing</em>Porcelain tile floor</div>
+      <div class="float-tag ft2"><em>Estimates</em>Always free</div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll<i></i></div>
+</section>
+
+<div class="strip"><div class="track">${[0,1].map(()=>["Hardwood Installation","Floor Refinishing","Tile Installation","Staircase Renovation","Engineered Wood","Custom Staining"].map(s=>`<span>${s}</span>`).join("")).join("")}</div></div>
+
+<section class="light">
+  <div class="wrap dp">
+    <div class="head center r3d"><span class="eyebrow">What We Do</span><h2>Our <span class="gold">Flooring Services</span></h2>
+    <p>Six specialties, one standard of care. Choose a service to see how we work, what is included and how your project unfolds.</p></div>
+    <div class="grid3">${SERVICES.map(sCard).join("")}</div>
+    <div class="center-btn r3d"><a class="btn btn-gold mag" href="#/services">Explore Services →</a></div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap split dp">
+    <div class="stack3d r3d left tilt">
+      <div class="p p1"><img loading="lazy" src="${SERVICES[1].img}" alt="Refinished hardwood floor"></div>
+      <div class="p p2"><img loading="lazy" src="${SERVICES[3].img}" alt="Renovated staircase"></div>
+    </div>
+    <div class="r3d right">
+      <span class="eyebrow">About Us</span><h2>A Local Team That <span class="gold">Treats Your Home</span> Like Its Own</h2>
+      <p style="margin:20px 0">Premium Art Flooring &amp; Stairs is a Saint Louis flooring company built on attention to detail. We believe a floor should do more than cover a room — it should anchor the whole space.</p>
+      <ul class="checks"><li>Hands-on craftsmanship from first measurement to final coat</li><li>Clear communication, honest advice and tidy job sites</li><li>Finishes chosen to suit your style and daily life</li></ul>
+      <a class="btn btn-gold mag" href="#/about">Learn More About Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="dark mouse" style="overflow:hidden">
+  ${fl([["3%","10%",40,-12,18,"w"],["93%","20%",48,14,22,"a"],["50%","88%",36,10,17,""]])}
+  <div class="wrap dp" style="position:relative;z-index:2">
+    <div class="head center r3d"><span class="eyebrow">Why Choose Us</span><h2>The Premium Art <span class="gold">Difference</span></h2></div>
+    <div class="grid4">
+      ${[["🪵","Quality Craftsmanship","Boards are fitted, sanded and finished by skilled hands for smooth, consistent results."],
+         ["🧹","Clean, Respectful Work","We protect your home, control dust and leave every room tidy at day’s end."],
+         ["🎨","Tailored to Your Style","From stain colors to plank widths, every choice is shaped around your space."],
+         ["📋","Free, Clear Estimates","Straightforward guidance and pricing so you always know what to expect."]]
+        .map((w,i)=>`<div class="why-card tilt r3d" style="--d:${i*.1}s"><div class="ic">${w[0]}</div><h3>${w[1]}</h3><p>${w[2]}</p></div>`).join("")}
+    </div>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap dp">
+    <div class="head center r3d"><span class="eyebrow">Customer Reviews</span><h2>Words From <span class="gold">Our Clients</span></h2></div>
+    <div class="grid3">
+      ${REVIEWS.map((r,i)=>`<div class="rev tilt r3d" style="--d:${i*.12}s"><div class="stars">★★★★★</div><p>${r.text}</p>
+        <div class="who"><i>${r.name[0]}</i><div><b>${r.name}</b><span>${r.place}</span></div></div></div>`).join("")}
+    </div>
+    <p class="note">Sample cards shown. Edit the REVIEWS list in the code to add genuine customer reviews.</p>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap dp">
+    <div class="head center r3d"><span class="eyebrow">FAQs</span><h2>Questions, <span class="gold">Answered</span></h2></div>
+    <div class="faq">${FAQS.map((f,i)=>`<div class="fq r3d" style="--d:${i*.06}s"><button>${f[0]}<b>+</b></button><div><p>${f[1]}</p></div></div>`).join("")}</div>
+  </div>
+</section>
+${cta("Ready to Transform Your Floors?","Tell us about your project and we will arrange a free, no-pressure estimate.")}`;
+}
+
+const pageHero=(crumb,h,p)=>`<section class="page-hero dark mouse">${fl([["8%","28%",44,10,18,"w"],["90%","22%",38,-12,20,"a"],["78%","72%",50,14,24,""]])}
+<div class="wrap"><div class="crumbs r3d"><a href="#/">Home</a> / ${crumb}</div><h1 class="r3d">${h}</h1><p class="r3d">${p}</p></div></section>`;
+
+function about(){
+return pageHero("About Us","About <span class='gold'>Premium Art Flooring</span>","Craftsmanship, honesty and a deep respect for wood — the principles behind every floor and staircase we touch.")+`
+<section class="white"><div class="wrap split dp">
+  <div class="r3d left"><span class="eyebrow">Our Story</span><h2>Built on <span class="gold">Detail</span></h2>
+    <div class="prose" style="margin-top:22px">
+    <p>Premium Art Flooring &amp; Stairs serves homeowners across Saint Louis, Missouri with a simple belief: floors and stairs are the foundation of a home’s character, and they deserve to be treated as craft.</p>
+    <p>Our work spans hardwood installation, floor refinishing, custom staining, tile and staircase renovation. Whether we are reviving a century-old floor or fitting a brand-new space, we bring the same patience and precision to every board.</p>
+    <p>We listen first, explain clearly and work cleanly, so the experience is as enjoyable as the result. When we leave, you should love how your home looks and feels.</p></div>
+    <a class="btn btn-gold mag" style="margin-top:10px" href="#/contact">Talk to Our Team</a></div>
+  <div class="stack3d r3d right tilt"><div class="p p1"><img src="${SERVICES[0].img}" alt="Hardwood installation"></div><div class="p p2"><img src="${SERVICES[3].img}" alt="Staircase renovation"></div></div>
+</div></section>
+<section class="light"><div class="wrap dp">
+  <div class="head center r3d"><span class="eyebrow">Our Values</span><h2>What Guides <span class="gold">Every Project</span></h2></div>
+  <div class="grid3">
+  ${[["Craft First","We take the time to do each step properly, from prep to the final coat, because lasting beauty is built in the details."],
+     ["Honest Guidance","Straight answers and clear estimates, including when a simpler or more affordable option serves you better."],
+     ["Respect for Your Home","Protected surfaces, controlled dust and tidy work areas — your home is treated with care throughout."]]
+    .map((v,i)=>`<div class="panel tilt r3d" style="--d:${i*.12}s"><h3 class="gold">${v[0]}</h3><p>${v[1]}</p></div>`).join("")}
+  </div></div></section>
+<section class="white"><div class="wrap dp"><div class="head center r3d"><span class="eyebrow">Explore</span><h2>Our <span class="gold">Specialties</span></h2></div>
+  <div class="mini">${SERVICES.map(s=>`<a class="r3d" href="#/service/${s.id}"><img loading="lazy" src="${s.img}" alt="${s.name}"><span>${s.name}</span></a>`).join("")}</div></div></section>
+${cta("Let’s Plan Your Next Project","Reach out for a free estimate and see the Premium Art difference for yourself.")}`;
+}
+
+function servicesIndex(){
+return pageHero("Services","Our <span class='gold'>Services</span>","Everything your floors and stairs need, from first plank to final finish.")+`
+<section class="light"><div class="wrap dp"><div class="grid3">${SERVICES.map(sCard).join("")}</div></div></section>
+${cta("Not Sure Where to Start?","Describe what you have in mind and we will recommend the best option for your home and budget.")}`;
+}
+
+function servicePage(id){
+const s=SERVICES.find(x=>x.id===id); if(!s) return servicesIndex();
+const media=id==="tile-installation"?`<div class="frame sc tilt r3d right">${heroMedia()}</div>`:`<div class="frame tilt r3d right"><img src="${s.img}" alt="${s.name} by Premium Art Flooring & Stairs"></div>`;
+return `
+<section class="dark s-sec mouse">${fl([["48%","8%",46,12,20,"a"],["4%","70%",40,-14,18,"w"],["92%","82%",52,16,24,""]])}
+<div class="wrap s-hero">
+  <div><div class="crumbs r3d"><a href="#/">Home</a> / <a href="#/services">Services</a> / ${s.name}</div>
+  <h1 class="r3d" style="--d:.08s">${s.name.split(" ").slice(0,-1).join(" ")} <span class="gold">${s.name.split(" ").slice(-1)}</span></h1>
+  <p class="r3d" style="--d:.16s;font-size:1.1rem">${s.lead}</p>
+  <div class="btns r3d" style="--d:.24s"><a class="btn btn-gold mag" href="#/contact">Get a Free Quote</a><a class="btn btn-line mag" href="tel:+13143083249">${PHONE}</a></div></div>
+  ${media}
+</div></section>
+<section class="white"><div class="wrap split dp" style="align-items:start">
+  <div class="prose r3d left"><span class="eyebrow">Overview</span><h2 style="margin-bottom:24px">About This <span class="gold">Service</span></h2>${s.body.map(p=>`<p>${p}</p>`).join("")}</div>
+  <div class="panel r3d right"><h3 class="gold">What’s Included</h3><ul class="checks" style="margin-bottom:0">${s.inc.map(i=>`<li>${i}</li>`).join("")}</ul></div>
+</div></section>
+<section class="light"><div class="wrap dp"><div class="head center r3d"><span class="eyebrow">How It Works</span><h2>Our <span class="gold">Process</span></h2></div>
+  <div class="steps">${s.steps.map((st,i)=>`<div class="step tilt r3d" style="--d:${i*.1}s"><b>0${i+1}</b><h4>${st[0]}</h4><p>${st[1]}</p></div>`).join("")}</div></div></section>
+<section class="white"><div class="wrap dp"><div class="head center r3d"><span class="eyebrow">More Services</span><h2>Explore <span class="gold">Other Work</span></h2></div>
+  <div class="mini">${SERVICES.filter(x=>x.id!==id).map(x=>`<a class="r3d" href="#/service/${x.id}"><img loading="lazy" src="${x.img}" alt="${x.name}"><span>${x.name}</span></a>`).join("")}</div></div></section>
+${cta("Interested in "+s.name+"?","Contact us for a free estimate and let’s talk through the best approach for your home.")}`;
+}
+
+function areas(){
+return pageHero("Service Areas","Service <span class='gold'>Areas</span>","Proudly serving Saint Louis and the surrounding communities with expert flooring and staircase work.")+`
+<section class="light"><div class="wrap dp">
+  <div class="areas">${AREAS.map((a,i)=>`<div class="area r3d" style="--d:${(i%4)*.08}s">${a}</div>`).join("")}</div>
+  <p class="r3d" style="text-align:center;margin-top:34px">Don’t see your neighborhood? Call us — we often travel throughout the greater Saint Louis region.</p>
+  <div class="map r3d"><iframe title="Saint Louis, MO map" loading="lazy" src="https://www.google.com/maps?q=Saint+Louis,+MO&output=embed"></iframe></div>
+</div></section>
+${cta("Flooring Help Near You","Share your address and project details for a free estimate.")}`;
+}
+
+function gallery(){
+return pageHero("Gallery","Project <span class='gold'>Gallery</span>","A look at the textures, tones and details that define our work. Tap any image to enlarge.")+`
+<section class="light"><div class="wrap dp"><div class="gal">${GAL.map((g,i)=>`<figure class="r3d" style="--d:${(i%3)*.1}s"><img loading="lazy" src="${g.img}" alt="${g.cap}"><figcaption>${g.cap}</figcaption></figure>`).join("")}</div></div></section>
+${cta("Love What You See?","Let’s create something just as beautiful in your home.")}`;
+}
+
+function contact(){
+return pageHero("Contact Us","Contact <span class='gold'>Us</span>","Tell us about your floors or stairs. We’ll respond during business hours with next steps and a free estimate.")+`
+<section class="light"><div class="wrap c-grid dp">
+  <div class="info r3d left">
+    <div class="it"><i>📞</i><div><b>Phone</b><a href="tel:+13143083249">${PHONE}</a></div></div>
+    <div class="it"><i>✉</i><div><b>Email</b><a href="mailto:${MAIL}">${MAIL}</a></div></div>
+    <div class="it"><i>📍</i><div><b>Address</b><span>Saint Louis, MO</span></div></div>
+    <div class="it"><i>🕘</i><div><b>Working Hours</b><span>Monday – Friday<br>9:00 AM – 5:00 PM</span></div></div>
+  </div>
+  <div class="panel r3d right"><h3 class="gold">Request a Free Estimate</h3>
+    <form id="cform" style="margin-top:20px">
+      <div class="row"><input name="n" placeholder="Your name" required><input name="p" placeholder="Phone number" required></div>
+      <div class="row"><input type="email" name="e" placeholder="Email address" required>
+      <select name="s">${SERVICES.map(s=>`<option>${s.name}</option>`).join("")}<option>Floor Repair</option><option>Other</option></select></div>
+      <textarea name="m" placeholder="Tell us about your project" required></textarea>
+      <button class="btn btn-gold" type="submit" style="justify-content:center">Send Message →</button>
+      <div class="ok" id="ok">Thank you! Your email app has opened with your message ready to send.</div>
+    </form></div>
+</div></section>`;
+}
+
+/* ===== router ===== */
+const TITLES={home:"Hardwood Floors Saint Louis, MO",about:"About Us",services:"Services",areas:"Service Areas",gallery:"Gallery",contact:"Contact Us"};
+function route(){
+  const h=(location.hash||"#/").replace(/^#\/?/,""), parts=h.split("/"), p=parts[0]||"home";
+  let html,key=p,title;
+  if(p==="about")html=about();
+  else if(p==="services")html=servicesIndex();
+  else if(p==="service"){html=servicePage(parts[1]);key="service";const s=SERVICES.find(x=>x.id===parts[1]);title=s?s.name:"Services"}
+  else if(p==="service-areas"){html=areas();key="areas"}
+  else if(p==="gallery")html=gallery();
+  else if(p==="contact")html=contact();
+  else{html=home();key="home"}
+  $("#app").innerHTML=html;
+  document.title=(title||TITLES[key]||"Home")+" | Premium Art Flooring & Stairs";
+  $$("nav a.lnk").forEach(a=>a.classList.toggle("active",a.dataset.r===key||(key==="services"&&a.dataset.r==="service")));
+  $("#nav").classList.remove("open");
+  window.scrollTo({top:0,behavior:"instant"});
+  setupFX();updateDepth();
+}
+
+function setupFX(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1,rootMargin:"0px 0px -5% 0px"});
+  $$(".r3d").forEach(el=>io.observe(el));
+  // tilt with glare
+  $$(".tilt").forEach(el=>{
+    el.addEventListener("mousemove",e=>{
+      if(!el.classList.contains("in"))return;
+      const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      el.style.transition="transform .1s";
+      el.style.setProperty("--mx",(x+.5)*100+"%");el.style.setProperty("--my",(y+.5)*100+"%");
+      el.style.transform=`perspective(1000px) rotateY(${x*14}deg) rotateX(${-y*14}deg) translateZ(14px)`;
+    });
+    el.addEventListener("mouseleave",()=>{el.style.transition="transform .6s";el.style.transform=""});
+  });
+  // mouse parallax for floating 3D tiles
+  $$(".mouse").forEach(el=>el.addEventListener("mousemove",e=>{
+    const r=el.getBoundingClientRect();
+    el.style.setProperty("--px",((e.clientX-r.left)/r.width-.5)*2);
+    el.style.setProperty("--py",((e.clientY-r.top)/r.height-.5)*2);
+  }));
+  // magnetic buttons
+  $$(".mag").forEach(b=>{
+    b.addEventListener("mousemove",e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.2}px,${(e.clientY-r.top-r.height/2)*.3-2}px)`});
+    b.addEventListener("mouseleave",()=>b.style.transform="");
+  });
+  // faq
+  $$(".fq").forEach(f=>f.querySelector("button").addEventListener("click",()=>{
+    const d=f.querySelector("div"),open=f.classList.contains("open");
+    $$(".fq.open").forEach(o=>{o.classList.remove("open");o.querySelector("div").style.maxHeight=0});
+    if(!open){f.classList.add("open");d.style.maxHeight=d.scrollHeight+"px"}
+  }));
+  // gallery lightbox
+  $$(".gal figure").forEach(f=>f.addEventListener("click",()=>{const lb=$("#lightbox");lb.querySelector("img").src=f.querySelector("img").src;lb.classList.add("on")}));
+  // contact form -> mailto
+  const cf=$("#cform");
+  if(cf)cf.addEventListener("submit",e=>{
+    e.preventDefault();const d=new FormData(cf);
+    const body=`Name: ${d.get("n")}%0D%0APhone: ${d.get("p")}%0D%0AEmail: ${d.get("e")}%0D%0AService: ${d.get("s")}%0D%0A%0D%0A${encodeURIComponent(d.get("m"))}`;
+    location.href=`mailto:${MAIL}?subject=${encodeURIComponent("Estimate request: "+d.get("s"))}&body=${body}`;
+    $("#ok").style.display="block";cf.reset();
+  });
+}
+
+/* scroll-driven 3D depth: sections tilt and recede as they move through the viewport */
+function updateDepth(){
+  const vh=innerHeight;
+  $$(".dp").forEach(el=>{
+    const r=el.getBoundingClientRect(),p=Math.max(-1,Math.min(1,((r.top+r.height/2)-vh/2)/vh));
+    el.style.transform=`perspective(1600px) rotateX(${(p*-5).toFixed(2)}deg) translateZ(${(-Math.abs(p)*50).toFixed(1)}px)`;
+  });
+}
+
+/* ===== global ===== */
+$("#ddServices").innerHTML=SERVICES.map(s=>`<a href="#/service/${s.id}">${s.name}</a>`).join("")+`<a href="#/services" style="color:#a05f00;font-weight:700">View all services →</a>`;
+$("#yr").textContent=new Date().getFullYear();
+$("#burger").onclick=()=>$("#nav").classList.toggle("open");
+$("#lightbox").onclick=e=>e.currentTarget.classList.remove("on");
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$("#lightbox").classList.remove("on")});
+$$("#nav a").forEach(a=>a.addEventListener("click",()=>$("#nav").classList.remove("open")));
+const glow=$("#glow");
+addEventListener("mousemove",e=>{glow.style.transform=`translate(${e.clientX}px,${e.clientY}px)`},{passive:true});
+let tick=false;
+addEventListener("scroll",()=>{
+  if(tick)return;tick=true;
+  requestAnimationFrame(()=>{
+    const y=scrollY,max=document.documentElement.scrollHeight-innerHeight;
+    $("#hdr").classList.toggle("solid",y>40);
+    $("#progress").style.width=(max>0?y/max*100:0)+"%";
+    document.documentElement.style.setProperty("--scroll",Math.min(y/innerHeight,1.2).toFixed(3));
+    updateDepth();tick=false;
+  });
+},{passive:true});
+addEventListener("resize",updateDepth);
+addEventListener("hashchange",route);
+addEventListener("load",()=>setTimeout(()=>$("#loader").classList.add("done"),2300));
+route();
+</script>
+</body>
+</html>
